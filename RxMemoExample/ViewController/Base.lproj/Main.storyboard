@@ -25,7 +25,7 @@
         <!--메모 목록-->
         <scene sceneID="mwZ-Z8-bZQ">
             <objects>
-                <viewController id="2ah-cm-M4a" sceneMemberID="viewController">
+                <viewController id="2ah-cm-M4a" customClass="MemoListViewController" customModule="RxMemoExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPe-KN-AKp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
         <!--메모 보기-->
         <scene sceneID="LNr-Vv-2Ti">
             <objects>
-                <viewController storyboardIdentifier="MemoDetailViewController" id="CyT-e9-4h0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoDetailViewController" id="CyT-e9-4h0" customClass="MemoDetailViewController" customModule="RxMemoExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iCh-Gg-gwF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="1909" y="814"/>
         </scene>
-        <!--EditMemoViewController-->
+        <!--새 메모-->
         <scene sceneID="50Q-vd-xyy">
             <objects>
-                <viewController title="EditMemoViewController" id="h9n-fu-rYX" sceneMemberID="viewController">
+                <viewController id="h9n-fu-rYX" customClass="MemoComposeViewController" customModule="RxMemoExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HxK-P4-wXY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
                 <navigationController storyboardIdentifier="ComposeNav" automaticallyAdjustsScrollViewInsets="NO" id="2Qw-Rn-GyB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gNk-cW-e2e">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
