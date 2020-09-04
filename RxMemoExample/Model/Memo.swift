@@ -18,6 +18,7 @@ struct Memo: Equatable {
         self.insertDate = insertDate
         self.identity = "\(insertDate.timeIntervalSinceReferenceDate)"
     }
+    
     //New instance Method
     init(original: Memo, updatedContent: String){
         self = original
