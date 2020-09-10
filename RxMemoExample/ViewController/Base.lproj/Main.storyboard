@@ -81,7 +81,7 @@
                 <navigationController storyboardIdentifier="ListNav" automaticallyAdjustsScrollViewInsets="NO" id="kOj-Mv-ZRH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OIU-O3-1Dr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -117,10 +117,34 @@
                     <view key="view" contentMode="scaleToFill" id="HxK-P4-wXY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RLE-cy-mPz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="URC-zm-taN" firstAttribute="bottom" secondItem="RLE-cy-mPz" secondAttribute="bottom" id="IHS-eN-qeh"/>
+                            <constraint firstItem="RLE-cy-mPz" firstAttribute="leading" secondItem="URC-zm-taN" secondAttribute="leading" id="byj-hA-ppp"/>
+                            <constraint firstItem="RLE-cy-mPz" firstAttribute="top" secondItem="URC-zm-taN" secondAttribute="top" id="e8h-Ae-0aO"/>
+                            <constraint firstItem="URC-zm-taN" firstAttribute="trailing" secondItem="RLE-cy-mPz" secondAttribute="trailing" id="jiE-hP-Asu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="URC-zm-taN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="새 메모" id="Mp6-D9-brI"/>
+                    <navigationItem key="navigationItem" title="새 메모" id="Mp6-D9-brI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="j1L-Lc-GCU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="haW-Va-UTH"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="j1L-Lc-GCU" id="y7Z-xf-hZv"/>
+                        <outlet property="contentTextView" destination="RLE-cy-mPz" id="Mj2-eu-iGq"/>
+                        <outlet property="saveButton" destination="haW-Va-UTH" id="5Wo-hb-XQy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPo-FN-n8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

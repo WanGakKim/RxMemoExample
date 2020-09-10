@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Action
+
 class MemoComposeViewModel : CommonViewModel{
     private let content: String?
     
@@ -40,6 +41,6 @@ class MemoComposeViewModel : CommonViewModel{
             }
             return sceneCoordinator.close(animated: true).asObservable().map{ _ in }
         }
-        super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage) 
+        super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
     }
 }
