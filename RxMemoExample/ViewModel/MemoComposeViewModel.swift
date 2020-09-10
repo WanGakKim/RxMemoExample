@@ -21,7 +21,7 @@ class MemoComposeViewModel : CommonViewModel{
     let saveAction: Action<String, Void>
     let cancelAction: CocoaAction
     
-    init(title: String, content: String? = nil ,
+    init(title: String, content: String? = "" ,
          sceneCoordinator: SeceneCoordinatorType,
          storage: MemoStorageType,
          saveAction: Action<String,Void>? = nil,
