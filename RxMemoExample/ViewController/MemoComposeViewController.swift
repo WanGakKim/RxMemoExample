@@ -40,6 +40,8 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType{
             .withLatestFrom(contentTextView.rx.text.orEmpty)
             .bind(to: viewModel.saveAction.inputs)
             .disposed(by: rx.disposeBag)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

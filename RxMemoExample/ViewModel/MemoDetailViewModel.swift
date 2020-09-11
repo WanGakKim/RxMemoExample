@@ -28,9 +28,37 @@ class MemoDetailViewModel : CommonViewModel{
         self.memo = memo
         
         contents = BehaviorSubject<[String]>(value: [
-            memo.content
+            memo.content,
             formatter.string(from: memo.insertDate)
         ])
         super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
+    }
+    
+    lazy var popAction = CocoaAction { [unowned self] in
+        
+        return self.sceneCoordinator.close(animated: true).asObservable().map{ _ in}
+    }
+    
+    func performUpdate(memo: Memo) -> Action<String,Void> {
+        return Action { input in
+            self.storage.update(memo: memo, content: input).subscribe(onNext: { (updatedMemo) in
+                self.contents.onNext([
+                    updatedMemo.content,
+                    self.formatter.string(from: updatedMemo.insertDate)
+                ])
+            }).disposed(by: self.rx.disposeBag)
+            return Observable.empty()
+        }
+    }
+    
+    func makeEditAction() -> CocoaAction {
+        return CocoaAction {
+            _ in
+            let composeViewModel = MemoComposeViewModel(title: "메모 편집", content: self.memo.content, sceneCoordinator: self.sceneCoordinator, storage: self.storage, saveAction: self.performUpdate(memo: self.memo))
+            
+            let composeSecne = Scene.compose(composeViewModel)
+            return self.sceneCoordinator.transition(to: composeSecne, using: .modal, animated: true)
+                .asObservable().map{ _ in}
+        }
     }
 }

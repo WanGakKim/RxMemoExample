@@ -51,5 +51,7 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
                     fatalError()
                 }
             }.disposed(by: rx.disposeBag)
+        
+        editButton.rx.action = viewModel.makeEditAction()
     }
 }

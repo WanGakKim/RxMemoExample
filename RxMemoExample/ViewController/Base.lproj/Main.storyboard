@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kOj-Mv-ZRH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -101,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NiQ-Tr-MiI">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiQ-Tr-MiI">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem systemItem="trash" id="xay-3n-xLt">
@@ -157,10 +157,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="wi9-2i-0Lz" firstAttribute="trailing" secondItem="0XR-PU-dFG" secondAttribute="trailing" id="4KB-7t-kkB"/>
-                            <constraint firstItem="NiQ-Tr-MiI" firstAttribute="top" secondItem="0XR-PU-dFG" secondAttribute="bottom" id="UiG-tK-abZ"/>
+                            <constraint firstItem="NiQ-Tr-MiI" firstAttribute="leading" secondItem="wi9-2i-0Lz" secondAttribute="leading" id="Kuu-EH-1ps"/>
                             <constraint firstItem="0XR-PU-dFG" firstAttribute="top" secondItem="wi9-2i-0Lz" secondAttribute="top" id="Wv5-nt-eoQ"/>
+                            <constraint firstItem="NiQ-Tr-MiI" firstAttribute="bottom" secondItem="wi9-2i-0Lz" secondAttribute="bottom" id="ZVa-5c-qzZ"/>
+                            <constraint firstItem="NiQ-Tr-MiI" firstAttribute="trailing" secondItem="wi9-2i-0Lz" secondAttribute="trailing" id="cYH-hd-ko2"/>
                             <constraint firstItem="NiQ-Tr-MiI" firstAttribute="bottom" secondItem="wi9-2i-0Lz" secondAttribute="bottom" id="cjP-aS-W3O"/>
                             <constraint firstItem="0XR-PU-dFG" firstAttribute="leading" secondItem="wi9-2i-0Lz" secondAttribute="leading" id="fwd-Ek-uO5"/>
+                            <constraint firstItem="NiQ-Tr-MiI" firstAttribute="top" secondItem="0XR-PU-dFG" secondAttribute="bottom" id="hQU-Ni-osi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wi9-2i-0Lz"/>
                     </view>
