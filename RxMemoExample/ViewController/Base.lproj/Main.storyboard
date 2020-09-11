@@ -170,7 +170,7 @@
                     <navigationItem key="navigationItem" title="메모 보기" id="k8f-HK-Bk2"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="deleteButton" destination="NiQ-Tr-MiI" id="6E3-Fn-f2l"/>
+                        <outlet property="deleteButton" destination="xay-3n-xLt" id="wwS-7g-MFS"/>
                         <outlet property="editButton" destination="c09-lm-bTf" id="nHL-FH-d7V"/>
                         <outlet property="listTableView" destination="0XR-PU-dFG" id="fw3-Ql-XCX"/>
                         <outlet property="shareButton" destination="g64-R3-U5d" id="gcw-Pb-rQP"/>
