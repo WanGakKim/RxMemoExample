@@ -10,15 +10,34 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Action
-
+import RxDataSources
 /**
  목록화면 상단 + 버튼
  이 버튼을 탭하면 쓰기화면을 모달방식으로 표현
 **/
+
+typealias MemoSectionModel = AnimatableSectionModel<Int, Memo>
+
+
+
 class MemoListViewModel : CommonViewModel{
-    var memoList: Observable<[Memo]> {
-        return storage.memoList()
-    }
+    
+    
+    var memoList: Observable<[MemoSectionModel]> {
+           return storage.memoList()
+       }
+    // RxDataSource
+    let dataSource: RxTableViewSectionedAnimatedDataSource<MemoSectionModel> = {
+        let ds = RxTableViewSectionedAnimatedDataSource<MemoSectionModel>.init(configureCell: { (dataSource, tableView, indexPath, item) -> UITableViewCell in
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            
+            cell.textLabel?.text = item.content
+            return cell
+        })
+        ds.canEditRowAtIndexPath = { _,_ in return true}
+        return ds
+    }()
     
     func performUpdate(memo: Memo) -> Action<String,Void> {
         return Action { input in

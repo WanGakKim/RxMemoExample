@@ -23,7 +23,7 @@ extension Scene {
             guard let nav = storyboard.instantiateViewController(withIdentifier: "ListNav") as? UINavigationController else {
                 fatalError()
             }
-            
+            print(nav)
             guard var listVC = nav.viewControllers.first as? MemoListViewController else {
                 fatalError()
             }
@@ -43,7 +43,7 @@ extension Scene {
             guard let nav = storyboard.instantiateViewController(withIdentifier: "ComposeNav") as? UINavigationController else {
                 fatalError()
             }
-            
+            print(nav)
             guard var composeVC = nav.viewControllers.first as? MemoComposeViewController else{
                 fatalError()
             }

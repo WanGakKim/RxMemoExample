@@ -63,6 +63,7 @@ class SceneCoordnator: SeceneCoordinatorType {
             subject.onCompleted()
             
         case .modal:
+            currentVC.navigationController
             currentVC.present(target, animated: animated) {
                 subject.onCompleted()
             }

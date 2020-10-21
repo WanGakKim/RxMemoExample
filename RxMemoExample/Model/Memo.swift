@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RxDataSources // tableview와 collectionView에 binding 할 수 있습니다
 
-struct Memo: Equatable {
+struct Memo: Equatable, IdentifiableType{
     var content: String
     var insertDate: Date
     var identity: String
